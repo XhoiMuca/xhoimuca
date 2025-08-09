@@ -3,18 +3,7 @@ import { useGLTF,Float ,useTexture} from '@react-three/drei'
 import * as THREE from 'three'
 
 export function Rings(props) {
-  const { nodes, materials } = useGLTF('/models/iphone.gltf')
-  const screenTexture = useTexture('/textures/desk/upay.png')
 
-screenTexture.wrapS = THREE.ClampToEdgeWrapping
-screenTexture.wrapT = THREE.ClampToEdgeWrapping
-
-// Flip horizontally to fix backward texture and scale down to 90%
-screenTexture.repeat.set(1, -0.99)
-screenTexture.offset.set(0, 0)
-
-screenTexture.center.set(1, 0.55)
-screenTexture.rotation = 0
   return (
     <Float
       floatIntensity={1}   // how much it moves

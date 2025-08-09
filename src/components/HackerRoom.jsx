@@ -7,7 +7,7 @@ const { nodes, materials } = useGLTF('/models/scene.gltf')
 
 const logo = useTexture('/textures/desk/209084214.jpeg')
 const screenTexture = useTexture('/textures/desk/code.png')
-  const monitortxt = useTexture('textures/desk/monitor.png');
+  const monitortxt = useTexture('textures/desk/chatgpt.png');
 
   return (
     <group {...props} dispose={null}>
@@ -2844,9 +2844,12 @@ const screenTexture = useTexture('/textures/desk/code.png')
             castShadow
             receiveShadow
             geometry={nodes.Box265_black_plastic_matte_0.geometry}
-            material={materials.black_plastic_matte}
+            material={materials.w}
             position={[144.581, -3.679, -173.027]}
-          />
+            >
+            <meshMatcapMaterial map={monitortxt} />
+
+            </mesh>
         </group>
         <group position={[0, -84.525, 72.616]} scale={[0.902, 1, 1]}>
           <mesh

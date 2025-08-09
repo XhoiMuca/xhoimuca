@@ -7,6 +7,7 @@ import { Center, OrbitControls } from '@react-three/drei';
 import { myProjects } from '../constants/index.js';
 import CanvasLoader from '../components/Loading.jsx';
 import DemoComputer from '../components/DemoComputer.jsx';
+import MacBook from '../components/MacBook.jsx';
 
 const projectCount = myProjects.length;
 
@@ -86,8 +87,9 @@ const Projects = () => {
             <directionalLight position={[10, 10, 5]} />
             <Center>
               <Suspense fallback={<CanvasLoader />}>
-                <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                  <DemoComputer texture={currentProject.texture} />
+                <group scale={0.1} position={[0, -1, 0]} rotation={[0.1, -0.1, 0]}>
+                <MacBook texture={currentProject.texture} />
+                  {/* <DemoComputer texture={currentProject.texture} /> */}
                 </group>
               </Suspense>
             </Center>

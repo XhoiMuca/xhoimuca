@@ -10,9 +10,11 @@ import ReactLogo from '../components/ReactLogo.jsx';
 import Button from '../components/Button.jsx';
 import Target from '../components/Target.jsx';
 import CanvasLoader from '../components/Loading.jsx';
+import Python from '../components/Python.jsx';
 import HeroCamera from '../components/HeroCamera.jsx';
-import { calculateSizes } from '../constants/index.js';
+import { useDeviceSizes } from '../constants/index.js';
 import { HackerRoom } from '../components/HackerRoom.jsx';
+import CSharp from '../components/csharp.jsx';
 
 const Hero = () => {
   // Use media queries to determine screen size
@@ -20,7 +22,7 @@ const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
 
-  const sizes = calculateSizes(isSmall, isMobile, isTablet);
+  const sizes = useDeviceSizes(isSmall, isMobile, isTablet);
 
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
@@ -39,14 +41,16 @@ const Hero = () => {
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
             <HeroCamera isMobile={isMobile}>
-              <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[Math.PI * 0.11, 0, 0]} />
+              <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[Math.PI * 0.1, 0.1, 0]} />
             </HeroCamera>
 
             <group>
               <Target position={sizes.targetPosition} />
-              <ReactLogo position={sizes.cubePosition} />
-              {/* <Cube position={sizes.cubePosition} /> */}
-             <Rings scale={sizes.ringScale} position={sizes.ringPosition} />
+              <ReactLogo position={sizes.reactLogoPosition} />
+              <Python position={sizes.cubePosition} />
+              <CSharp position={sizes.ringPosition} />
+                            {/* <Cube position={sizes.cubePosition} /> */}
+             {/* <Rings scale={sizes.ringScale} position={sizes.ringPosition} /> */}
 
             </group>
 

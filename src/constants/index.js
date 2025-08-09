@@ -1,3 +1,6 @@
+import useDeviceType from '../hooks/useDeviceType';
+import { useMediaQuery } from 'react-responsive';
+
 export const navLinks = [
   {
     id: 1,
@@ -245,15 +248,22 @@ export const myProjects = [
     ],
   },
 ];
+export const useDeviceSizes = () => {
+  const isSmall = useMediaQuery({ maxWidth: 440 });
+  const isMobile = useMediaQuery({ maxWidth: 600 });
+  const isTablet = useMediaQuery({ minWidth: 601, maxWidth: 1024 });
+  
+  return calculateSizes(isSmall, isMobile, isTablet);
+};
+
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return {
-    deskScale: isSmall ? 0.003 : isMobile ? 0.005 : 0.005,
-    deskPosition: isMobile ? [0.1, -3.0, 0] : [-0.4, -3.9, 0],
-    cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
-    reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
-    ringScale: isSmall ? 0.0003 : isMobile ? 0.005 : 0.25,
-    ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-13, 5, -10],
+    deskScale: isSmall ? 0.004 : isMobile ? 0.009 : 0.005,
+    deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
+    cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5.5, -6, 0] : [9, -5.5, 0],
+    reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [6, 4, 0] : isTablet ? [7, 3, 0] : [12, 3, -10],
+    ringPosition: isSmall ? [-3, 2, 0] : isMobile ? [-3, 2, 0] : isTablet ? [-7, 1, 0] : [-8.7, 2.5, 0],
     targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
   };
 };
