@@ -2,7 +2,7 @@ import { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
-import Developer from '../components/Developer.jsx';
+import Avatar from '../components/Avatar.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import { workExperiences } from '../constants/index.js';
 
@@ -23,7 +23,9 @@ const WorkExperience = () => {
               <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
 
               <Suspense fallback={<CanvasLoader />}>
-                <Developer position-y={-3} scale={3} animationName={animationName} />
+                {/* <Developer position-y={-3} scale={3} animationName={animationName} /> */}
+                <Avatar position-y={-3} scale={3} animationName={animationName} />
+
               </Suspense>
             </Canvas>
           </div>

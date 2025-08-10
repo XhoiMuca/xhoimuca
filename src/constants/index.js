@@ -61,15 +61,15 @@ export const clientReviews = [
 
 export const myProjects = [
   {
-    title: 'Podcastr - AI Podcast Platform',
-    desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
+    title: 'UPay - Digital Wallet',
+    desc: 'UPay redefines your wallet by consolidating QR payments, utility bill settlements, online purchases, and card transactions—conveniently unified in a single platform.',
     subdesc:
-      'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-    href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
+      'Built using SwiftUI and UIKit, uPay.al is designed for seamless performance and a smooth user experience across iOS devices.',
+    href: 'https://apps.apple.com/us/app/upay-albania/id1518207112',
     texture: '/textures/project/project1.mp4',
-    logo: '/assets/project-logo1.png',
+    logo: '/assets/upayLogo.png',
     logoStyle: {
-      backgroundColor: '#2A1816',
+      backgroundColor: '#f4f4f4',
       border: '0.2px solid #36201D',
       boxShadow: '0px 0px 60px 0px #AA3C304D',
     },
@@ -77,35 +77,19 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
+        name: 'SwiftUI',
+        path: '/assets/swiftUi.png',
+      }
     ],
   },
   {
-    title: 'LiveDoc - Real-Time Google Docs Clone',
-    desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
-    subdesc:
-      'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-    href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-    texture: '/textures/project/project2.mp4',
-    logo: '/assets/project-logo2.png',
-    logoStyle: {
+    title: 'Biznes UPay - Real-Time Business Dashboard',
+    desc: 'Biznes uPay is a powerful web platform for businesses registered with uPay, offering real-time access to transactions, payments, and financial insights. Built to provide clarity and control, it enables businesses to track and manage finances effortlessly.',
+subdesc: 'With Biznes uPay, companies can monitor operations in real time, review detailed transaction histories, and generate reports—through a secure, high-performance interface designed for speed and reliability.',
+href: 'https://biznes.upay.al/',
+texture: '/textures/project/project2.mp4',
+logo: '/assets/upayLogo.png',
+logoStyle: {
       backgroundColor: '#13202F',
       border: '0.2px solid #17293E',
       boxShadow: '0px 0px 60px 0px #2F6DB54D',
@@ -114,38 +98,31 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
+        name: 'c#',
+        path: '/assets/Csharp_Logo.png',
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        name: 'Html',
+        path: 'assets/HTML5_Badge_512.png',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
+        name: 'JavaScript',
+        path: '/assets/js.png',
+      }
     ],
   },
   {
-    title: 'CarePulse - Health Management System',
-    desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
-    subdesc:
-      'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-    href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
-    texture: '/textures/project/project3.mp4',
-    logo: '/assets/project-logo3.png',
-    logoStyle: {
-      backgroundColor: '#60f5a1',
-      background:
-        'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
+    title: 'Exoticjet – Luxury JetCar E-Commerce Platform',
+    desc: 'Exoticjet is a high-end WordPress e-commerce site offering premium JetCar watercraft—vehicles blending the thrill of jet skiing with the luxury of exotic cars. Designed for effortless browsing and purchasing, it showcases customizable JetCar models with sleek visuals and seamless shopping.',
+    subdesc: 'Built for performance and convenience, Exoticjet integrates responsive design, secure payment gateways, financing options, and streamlined product management—empowering customers to explore, customize, and buy their dream JetCar with confidence.',
+    href: 'https://exoticjet.com/',
+texture: '/textures/project/project3.mp4',
+logo: '/assets/exoticjet.png',
+logoStyle: {
+      backgroundColor: '#f4f4f4',
+      background: '#f4f4f4',
       border: '0.2px solid rgba(208, 213, 221, 1)',
       boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
     },
@@ -153,24 +130,14 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
+        name: 'Wordpress',
+        path: '/assets/wordpress.png',
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
+        name: 'JavaScript',
+        path: '/assets/js.png',
+      }
     ],
   },
   {
@@ -271,29 +238,29 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
   {
     id: 1,
-    name: 'Framer',
-    pos: 'Lead Web Developer',
+    name: 'Unioni Financiar Tiranë',
+    pos: 'Software Developer',
     duration: '2022 - Present',
-    title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-    icon: '/assets/framer.svg',
+    title: "As a key contributor to the functionality and user experience of three financial administration websites built on the C# .NET framework, and an iOS application developed with SwiftUI and Swift, I ensure the seamless operation and continuous improvement of these platforms. My responsibilities include: Maintenance and Optimization: Ensuring the smooth operation of financial administration websites and the iOS application by promptly resolving any issues and implementing necessary updates. Collaboration: Working closely with cross-functional teams to deliver high-quality solutions that meet evolving business requirements. Continuous Improvement: Contributing to the enhancement of our digital platforms through proactive problem-solving and innovation. My role is pivotal in maintaining the performance, reliability, and user satisfaction of our digital financial solutions.",
+    icon: '/assets/unioni_financiar_tirana_logo.jpeg',
     animation: 'victory',
   },
   {
     id: 2,
-    name: 'Figma',
-    pos: 'Web Developer',
-    duration: '2020 - 2022',
-    title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-    icon: '/assets/figma.svg',
+    name: 'WoW Digital',
+    pos: 'React Developer',
+    duration: '2022 - 2022',
+    title: "In my role, I immersed myself in ReactJS, JavaScript, and HTML/CSS, applying these skills to advance web development projects. I focused on implementing and optimizing features to elevate the overall user experience.In my role, I immersed myself in ReactJS, JavaScript, and HTML/CSS, applying these skills to advance web development projects. I focused on implementing and optimizing features to elevate the overall user experience.",
+    icon: '/assets/wow.jpeg',
     animation: 'clapping',
   },
   {
     id: 3,
-    name: 'Notion',
-    pos: 'Junior Web Developer',
-    duration: '2019 - 2020',
-    title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-    icon: '/assets/notion.svg',
+    name: 'Local Web',
+    pos: 'Intership trainee',
+    duration: '2021 - 2021',
+    title: "During my internship, I cultivated proficiency in HTML/CSS, ReactJS, and PHP. I actively participated in various projects, applying these technologies to develop and enhance web solutionsDuring my internship, I cultivated proficiency in HTML/CSS, ReactJS, and PHP. I actively participated in various projects, applying these technologies to develop and enhance web solutions",
+    icon: '/assets/localwebit_logo.jpeg',
     animation: 'salute',
   },
 ];

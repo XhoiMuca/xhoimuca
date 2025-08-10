@@ -1,11 +1,10 @@
 
 import React, { useRef } from 'react'
 import { useGLTF, useTexture } from '@react-three/drei'
-
 export function HackerRoom(props) {
 const { nodes, materials } = useGLTF('/models/scene.gltf')
 
-const logo = useTexture('/textures/desk/209084214.jpeg')
+const logo = useTexture('/textures/desk/fulllogo-w.png')
 const screenTexture = useTexture('/textures/desk/code.png')
   const monitortxt = useTexture('textures/desk/chatgpt.png');
 
@@ -2390,8 +2389,10 @@ const screenTexture = useTexture('/textures/desk/code.png')
               castShadow
               receiveShadow
               geometry={nodes.Box242_black_plastic_0.geometry}
-              material={materials.black_plastic_1}>
-              <meshMatcapMaterial map={logo} />
+              material={materials.black_plastic_1}
+              
+              >
+              <meshMatcapMaterial  map={logo}   />
               </mesh>
             
           </group>
