@@ -60,13 +60,16 @@ const Projects = () => {
             </div>
 
             <a
-              className="flex items-center gap-2 cursor-pointer text-white-600"
-              href={currentProject.href}
-              target="_blank"
-              rel="noreferrer">
-              <p>Check Live Site</p>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
-            </a>
+  className="flex items-center gap-2 cursor-pointer text-white-600"
+  href={currentProject.href === '#' ? '#' : currentProject.href}
+  target={currentProject.href === '#' ? undefined : '_blank'}
+  rel={currentProject.href === '#' ? undefined : 'noreferrer'}
+>
+  <p>{currentProject.href === '#' ? 'Coming Soon' : 'Check Live Site'}</p>
+  {currentProject.href !== '#' && (
+    <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+  )}
+</a>
           </div>
 
           <div className="flex justify-between items-center mt-7">
