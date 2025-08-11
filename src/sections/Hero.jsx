@@ -12,7 +12,7 @@ import Python from '../components/Python.jsx';
 import HeroCamera from '../components/HeroCamera.jsx';
 import { useDeviceSizes } from '../constants/index.js';
 import { HackerRoom } from '../components/HackerRoom.jsx';
-import CSharp from '../components/csharp.jsx';
+import CSharp from '../components/CSharp.jsx';
 
 const Hero = () => {
   // Use media queries to determine screen size
