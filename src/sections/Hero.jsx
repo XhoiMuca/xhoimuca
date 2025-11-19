@@ -6,7 +6,7 @@ import { PerspectiveCamera } from '@react-three/drei';
 
 import ReactLogo from '../components/ReactLogo.jsx';
 import Button from '../components/Button.jsx';
-import Target from '../components/Target.jsx';
+// import Target from '../components/Target.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import Python from '../components/Python.jsx';
 import HeroCamera from '../components/HeroCamera.jsx';
@@ -43,7 +43,7 @@ const Hero = () => {
             </HeroCamera>
 
             <group>
-              <Target position={sizes.targetPosition} />
+              {/* <Target position={sizes.targetPosition} /> */}
               <ReactLogo position={sizes.reactLogoPosition} />
               <Python position={sizes.cubePosition} />
               <CSharp position={sizes.ringPosition} />
