@@ -1,5 +1,5 @@
 import emailjs from '@emailjs/browser';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 import useAlert from '../hooks/useAlert.js';
 import Alert from '../components/Alert.jsx';
@@ -11,6 +11,14 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const [form, setForm] = useState({ name: '', email: '', message: '' });
+
+  // Initialize EmailJS
+  useEffect(() => {
+    const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey);
+    }
+  }, []);
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
@@ -45,8 +53,7 @@ const Contact = () => {
           from_email: form.email,
           to_email: 'xhoi.work@gmail.com',
           message: form.message,
-        },
-        publicKey,
+        }
       )
       .then(
         () => {
@@ -68,11 +75,17 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
-          console.error(error);
+          console.error('EmailJS Error:', error);
+          
+          // More specific error message
+          let errorMessage = "I didn't receive your message 😢";
+          if (error.text) {
+            errorMessage = `Email service error: ${error.text}`;
+          }
 
           showAlert({
             show: true,
-            text: "I didn't receive your message 😢",
+            text: errorMessage,
             type: 'danger',
           });
         },
