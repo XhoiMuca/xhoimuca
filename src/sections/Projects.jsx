@@ -73,11 +73,11 @@ const Projects = () => {
           </div>
 
           <div className="flex justify-between items-center mt-7">
-            <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
+            <button className="arrow-btn" onClick={() => handleNavigation('previous')} aria-label="Previous project">
               <img src="/assets/left-arrow.png" alt="left arrow" />
             </button>
 
-            <button className="arrow-btn" onClick={() => handleNavigation('next')}>
+            <button className="arrow-btn" onClick={() => handleNavigation('next')} aria-label="Next project">
               <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
             </button>
           </div>
@@ -91,8 +91,6 @@ const Projects = () => {
               <Suspense fallback={<CanvasLoader />}>
                 <group scale={0.1} position={[0, -1, 0]} rotation={[0.1, -0.1, 0]}>
                 <MacBook texture={currentProject.texture} />
-                  {/* <DemoComputer texture={currentProject.texture} /> */}
-                  
                 </group>
               </Suspense>
             </Center>

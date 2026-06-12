@@ -92,10 +92,10 @@ const About = () => {
 
             <div className="space-y-2">
               <p className="grid-subtext text-center">Contact me</p>
-              <div className="copy-container" onClick={handleCopy}>
+              <button className="copy-container" onClick={handleCopy} aria-label="Copy email address">
                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
                 <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">xhoi.work@gmail.com</p>
-              </div>
+              </button>
             </div>
           </div>
         </div>

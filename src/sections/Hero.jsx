@@ -6,11 +6,10 @@ import { PerspectiveCamera } from '@react-three/drei';
 
 import ReactLogo from '../components/ReactLogo.jsx';
 import Button from '../components/Button.jsx';
-// import Target from '../components/Target.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import Python from '../components/Python.jsx';
 import HeroCamera from '../components/HeroCamera.jsx';
-import { useDeviceSizes } from '../constants/index.js';
+import { calculateSizes } from '../constants/index.js';
 import { HackerRoom } from '../components/HackerRoom.jsx';
 import CSharp from '../components/CSharp.jsx';
 
@@ -20,7 +19,7 @@ const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
 
-  const sizes = useDeviceSizes(isSmall, isMobile, isTablet);
+  const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
@@ -43,13 +42,9 @@ const Hero = () => {
             </HeroCamera>
 
             <group>
-              {/* <Target position={sizes.targetPosition} /> */}
               <ReactLogo position={sizes.reactLogoPosition} />
               <Python position={sizes.cubePosition} />
               <CSharp position={sizes.ringPosition} />
-                            {/* <Cube position={sizes.cubePosition} /> */}
-             {/* <Rings scale={sizes.ringScale} position={sizes.ringPosition} /> */}
-
             </group>
 
             <ambientLight intensity={1} />

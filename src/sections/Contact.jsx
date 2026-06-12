@@ -49,7 +49,7 @@ const Contact = () => {
         templateId,
         {
           from_name: form.name,
-          to_name: 'JavaScript Mastery',
+          to_name: 'Xhoi Muça',
           from_email: form.email,
           to_email: 'xhoi.work@gmail.com',
           message: form.message,
@@ -71,7 +71,7 @@ const Contact = () => {
               email: '',
               message: '',
             });
-          }, [3000]);
+          }, 3000);
         },
         (error) => {
           setLoading(false);

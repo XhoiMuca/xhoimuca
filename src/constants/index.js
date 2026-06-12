@@ -1,6 +1,3 @@
-import useDeviceType from '../hooks/useDeviceType';
-import { useMediaQuery } from 'react-responsive';
-
 export const navLinks = [
   {
     id: 1,
@@ -21,41 +18,6 @@ export const navLinks = [
     id: 4,
     name: 'Contact',
     href: '#contact',
-  },
-];
-
-export const clientReviews = [
-  {
-    id: 1,
-    name: 'Emily Johnson',
-    position: 'Marketing Director at GreenLeaf',
-    img: 'assets/review1.png',
-    review:
-      'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
-  },
-  {
-    id: 2,
-    name: 'Mark Rogers',
-    position: 'Founder of TechGear Shop',
-    img: 'assets/review2.png',
-    review:
-      'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-  },
-  {
-    id: 3,
-    name: 'John Dohsas',
-    position: 'Project Manager at UrbanTech ',
-    img: 'assets/review3.png',
-    review:
-      'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-  },
-  {
-    id: 4,
-    name: 'Ether Smith',
-    position: 'CEO of BrightStar Enterprises',
-    img: 'assets/review4.png',
-    review:
-      'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
   },
 ];
 
@@ -141,6 +103,33 @@ logoStyle: {
     ],
   },
   {
+    title: 'Lavazza Blue Albania – Premium Coffee Experience',
+    desc: 'Lavazza Blue Albania is the official website for Lavazza Blue products in Albania, showcasing a premium selection of coffee capsules, machines, and accessories tailored for the Albanian market.',
+    subdesc:
+      'A clean, visually rich platform designed to highlight the Lavazza Blue product range, brand story, and where-to-buy information—delivering an elegant and engaging experience for coffee enthusiasts.',
+    href: 'https://lavazzablue.al/',
+    texture: '/assets/lavazza-screenshot.png',
+    logo: '/assets/Logo-Coffee-Trade-Lavazza-3-scaled-e1770470674250.png',
+    logoStyle: {
+      backgroundColor: '#f4f4f4',
+      border: '0.2px solid #8B0000',
+      boxShadow: '0px 0px 60px 0px #8B00004D',
+    },
+    spotlight: '/assets/spotlight5.png',
+    tags: [
+      {
+        id: 1,
+        name: 'WordPress',
+        path: '/assets/wordpress.png',
+      },
+      {
+        id: 2,
+        name: 'JavaScript',
+        path: '/assets/js.png',
+      },
+    ],
+  },
+  {
     title: 'SeekFake – Exposing Deepfakes and Misinformation with Machine Intelligence',
     desc: 'SeekFake is a startup building an intelligent fact-verification platform that detects deepfakes and verifies the authenticity of news articles, social media posts, and other online content. Leveraging advanced Natural Language Processing (NLP) and real-time data from trusted sources, it assesses the credibility of any claim or media snippet.',
     subdesc: 'As the Frontend Developer, I focused on crafting a fast, intuitive, and responsive interface that makes complex AI-driven verification results clear and accessible to users—helping combat the growing threat of manipulated media.',
@@ -167,15 +156,6 @@ logoStyle: {
     ],
   }
 ];
-export const useDeviceSizes = () => {
-  const isSmall = useMediaQuery({ maxWidth: 440 });
-  const isMobile = useMediaQuery({ maxWidth: 600 });
-  const isTablet = useMediaQuery({ minWidth: 601, maxWidth: 1024 });
-  
-  return calculateSizes(isSmall, isMobile, isTablet);
-};
-
-
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return {
     deskScale: isSmall ? 0.004 : isMobile ? 0.009 : 0.005,
@@ -202,7 +182,7 @@ export const workExperiences = [
     name: 'WoW Digital',
     pos: 'React Developer',
     duration: '2022 - 2022',
-    title: "In my role, I immersed myself in ReactJS, JavaScript, and HTML/CSS, applying these skills to advance web development projects. I focused on implementing and optimizing features to elevate the overall user experience.In my role, I immersed myself in ReactJS, JavaScript, and HTML/CSS, applying these skills to advance web development projects. I focused on implementing and optimizing features to elevate the overall user experience.",
+    title: "In my role, I immersed myself in ReactJS, JavaScript, and HTML/CSS, applying these skills to advance web development projects. I focused on implementing and optimizing features to elevate the overall user experience.",
     icon: '/assets/wow.jpeg',
     animation: 'clapping',
   },
@@ -211,7 +191,7 @@ export const workExperiences = [
     name: 'Local Web',
     pos: 'Intership trainee',
     duration: '2021 - 2021',
-    title: "During my internship, I cultivated proficiency in HTML/CSS, ReactJS, and PHP. I actively participated in various projects, applying these technologies to develop and enhance web solutionsDuring my internship, I cultivated proficiency in HTML/CSS, ReactJS, and PHP. I actively participated in various projects, applying these technologies to develop and enhance web solutions",
+    title: "During my internship, I cultivated proficiency in HTML/CSS, ReactJS, and PHP. I actively participated in various projects, applying these technologies to develop and enhance web solutions.",
     icon: '/assets/localwebit_logo.jpeg',
     animation: 'salute',
   },

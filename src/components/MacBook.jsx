@@ -1,30 +1,45 @@
 
 import { useRef, useEffect } from 'react';
-import { useGLTF, useAnimations, useVideoTexture } from '@react-three/drei';
+import { useGLTF, useAnimations, useVideoTexture, useTexture } from '@react-three/drei';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+
+const isImagePath = (path) => /\.(png|jpe?g|webp|gif|bmp)$/i.test(path);
+
+const VideoScreen = ({ texture, geometry }) => {
+  const txt = useVideoTexture(texture);
+  useEffect(() => { if (txt) txt.flipY = true; }, [txt]);
+  return (
+    <mesh castShadow receiveShadow geometry={geometry}>
+      <meshBasicMaterial map={txt} toneMapped={false} />
+    </mesh>
+  );
+};
+
+const ImageScreen = ({ texture, geometry }) => {
+  const txt = useTexture(texture);
+  return (
+    <mesh castShadow receiveShadow geometry={geometry}>
+      <meshBasicMaterial map={txt} toneMapped={false} />
+    </mesh>
+  );
+};
 
 const MacBook = (props) => {
     const group = useRef();
     const { nodes, materials, animations } = useGLTF('models/macBook.glb')
+    useAnimations(animations, group);
 
-    const { actions } = useAnimations(animations, group);
-  
-    const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/project1.mp4');
-  
-    useEffect(() => {
-      if (txt) {
-        txt.flipY = true;
-      }
-    }, [txt]);
-  
+    const texturePath = props.texture || '/textures/project/project1.mp4';
+    const isImage = isImagePath(texturePath);
+
     useGSAP(() => {
       gsap.from(group.current.rotation, {
         y: Math.PI / 2,
         duration: 1,
         ease: 'power3.out',
       });
-    }, [txt]);
+    }, [texturePath]);
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]}>
@@ -367,16 +382,10 @@ const MacBook = (props) => {
           
         />
         {/* screen */}
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_123.geometry}
-          material={materials.w}
-
-
-     >
-        <meshBasicMaterial map={txt} toneMapped={false} />
-     </mesh>
+        {isImage
+          ? <ImageScreen texture={texturePath} geometry={nodes.Object_123.geometry} />
+          : <VideoScreen texture={texturePath} geometry={nodes.Object_123.geometry} />
+        }
         <mesh
           castShadow
           receiveShadow
